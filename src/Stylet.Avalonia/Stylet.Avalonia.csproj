@@ -7,4 +7,9 @@
 
 		<PackageReference Include="Avalonia" Version="0.10.15" />
 	</ItemGroup>
+	<ItemGroup>
+	  <None Update="Xaml\StyletResourceDictionary.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </None>
+	</ItemGroup>
 </Project>

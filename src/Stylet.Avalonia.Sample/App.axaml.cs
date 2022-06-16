@@ -17,7 +17,6 @@ namespace Stylet.Avalonia.Sample
             {
                 desktop.MainWindow = new MainWindow();
             }
-
             base.OnFrameworkInitializationCompleted();
         }
     }

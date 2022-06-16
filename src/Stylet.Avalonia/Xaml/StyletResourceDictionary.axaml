@@ -1,0 +1,34 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:s="clr-namespace:Stylet.Avalonia.Xaml"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+        </Border>
+    </Design.PreviewWith>
+
+    <Style x:Key="StyletConductorTabControl" Selector="TabControl">
+        <Setter Property="ItemsSource" Value="{Binding Items}"/>
+        <Setter Property="SelectedItem" Value="{s:RethrowingBinding ActiveItem}"/>
+        <Setter Property="DisplayMemberPath" Value="DisplayName"/>
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <ContentControl s:View.Model="{Binding}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" IsTabStop="False" />
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    
+    <Style Selector="ItemsControl" x:Key="StyletConductorItemsControl">
+        <Setter Property="ItemsSource" Value="{Binding Items}"/>
+        <Setter Property="ItemTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <ContentControl s:View.Model="{Binding}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" IsTabStop="False"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</Styles>
